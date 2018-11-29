@@ -44,7 +44,25 @@ article {
 	Mobile Devices: 0 - 480 pixels
    ============================================
 */
+@media only screen and (max-width: 480px) {
+    img.panel {
+        width: 100%;
+    }
 
+    nav.horizontal {
+        -webkit-order: 99;
+        order: 99;
+    }
+
+    body>footer {
+        -webkit-order: 100;
+        order: 100;
+    }
+}
+
+/* Aren't both footers in the body anyway? */
+
+/* I used both the webkit and regular types of order for cross-browser support. */
 
 
 
@@ -52,3 +70,31 @@ article {
 	Tablet and Desktop Devices: Greater than 480 pixels
    ===================================================
 */
+@media only screen and (min-width: 480px) {
+    nav.horizontal>ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 40px;
+    }
+
+    nav.horizontal>ul>li {
+        flex: 1 1 auto;
+    }
+
+    img.size1 {
+        width: 100%;
+    }
+
+    img.size2 {
+        width: 60%;
+    }
+
+    img.size3 {
+        width: 40%;
+    }
+
+    img.size4 {
+        width: 30%;
+    }
+}
